@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+   
+    <link href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple">
+    
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mainPlana">
+        <div class="header">
+            <h1>PLana</h1>
+        </div>
+        <div class="row">
+            <div class="col-3 col-s-3 menu">
+             
+              
+            </div>
+
+            <div class="col-6 col-s-9">
+              <div class ="addEdit">
+                <a href="./add.html">
+                <button 
+                class="btn btn-lg btn-warning" 
+                style=" margin-bottom: 20px; 
+                border-radius: 5px; background-color:thistle;
+                color:white;border-color: white; "> 
+                +</button>
+                </a>
+                <br>
+                <a href="./edit.html">
+                <button 
+                class="btn btn-lg btn-warning" 
+                style=" margin-bottom: 20px; 
+                border-radius: 5px; background-color:thistle;
+                color: white ;border-color: white;float: inline-end; "> 
+                Edit</button>
+                </a>
+                <a href="./edit.html">
+                  <button 
+                  class="btn btn-lg btn-warning" 
+                  style=" margin-bottom: 20px; 
+                  border-radius: 5px; background-color:thistle;
+                  color: white ;border-color: white;float: inline-end; "> 
+                  View</button>
+                  </a>
+              </div>
+              <div class= "containerE" >
+                <div class="jumbotran">
+                  <form>
+                    <button class="btn  btn-danger" 
+                    id="btnCancel" 
+                    style="margin-left: 5px; border-color:white;background-color: white;color: rgb(235, 164, 164); float: inline-end" > 
+                    X</button>            
+                    <h1 class='my-3' style= "text-align: center;color:rgb(187, 151, 187)">Add Task</h1> 
+
+                    <div class="form-group">
+                      <label for="" >Task Name</label>
+                      <span class="mandatory-flag">*</span>
+                      <input 
+                       class="form-control"
+                       placeholder= ""
+                       id="taskName"
+                       aria-describedby=""
+                       required>
+                      <!-- Validation -->
+                      <div class="valid-feedback">
+                        Looks Good!
+                      </div>
+                      <div class="Invalid-feedback">
+                          Task Name must be atleast 8 characters
+                      </div>
+                      
+                      
+                      <small id="" class="form-text text-muted"></small>
+                    </div>
+                    <div class="form-group">
+                      <label for="">Description</label>
+                      <textarea 
+                      class="form-control"  
+                      id="description" 
+                      required  ></textarea>
+                    </div>  
+                    <div class="Invalid-feedback">
+                      Description less than 8 characters - not accepted
+                    </div>        
+                    
+                    
+                    <div class="input-group" >
+                              <input type="text" class="form-control" id= "assignee" aria-label="Text input with dropdown button">
+                              <div class="input-group-append">
+                                <button class="btn btn-outline-primary dropdown-toggle" style="background-color: #0099cc;color:white" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Assignee</button>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" id="assignee1" href="#">Amutha</a>
+                                  <a class="dropdown-item" id="assignee1" href="#">Uma</a>
+                                  <a class="dropdown-item" id="assignee1" href="#">Others</a>
+                                </div>
+                    </div>
+                            
+
+                           
+                    <div class= "groupElement" style= "margin-top: 2vh" >
+                      <label for="exampleInputPassword1" >Date</label> 
+                      <input type="date" id="taskDate" style="border-radius: 5px;width:45vw;height:4vh " name="Date">  
+                    </div>
+                           
+                    <div>           
+                      <label for="exampleInputPassword1"style = "margin-top: 2vh; ">Status</label>
+                      <select value="task-status" id="status" style="height:4vh;width:45vw;margin-left:0;border-radius: 5px;" >
+                        <option name="TODO" id="toDo" > To Do</option>
+                        <option name="In Progress" id="inProgress">In Progress</option>
+                        <option name="Review"  id="review">Review</option>
+                        <option name="Done"  id="done">Done</option>
+                      </select>
+                    </div>      
+
+                    <div style="margin-top: 5vh;">
+                      <button type="submit" id= "btnSubmit" style="margin-left: 25 px;float: inline-end;" class="btn btn-success ">Submit</button>
+                      
+                      <button class="btn btn btn-warning" id= "btnWarning"style="margin-left: 15px; border-radius: 5px; "> <i class="fas fa-redo-alt"></i>Reset</button>
+                    </div>
+                            
+                  </form>
+                </div>
+              </div>
+            </div>
+      
+  
+      <div class="footer">
+        <p>PLana is Responsive Design. It can easily work on your smallest device to the largest.</p>
+      </div>
+    </div>  
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+<script src="add.js"></script>
+</body> 
+</html>
